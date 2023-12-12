@@ -1,7 +1,8 @@
 #!name = 墨鱼app解锁
-#!desc = https://t.me/ddgksf2021
+#!desc = 转换自墨鱼的QX解锁脚本 https://t.me/ddgksf2021
 #!author = ddgksf2013 
 #!homepage = https://github.com/ddgksf2013/dev/raw/master/ForOwnUse.conf
+#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Round_Robin_1.png
 
 [Mitm]
 hostname = server.zbisq.com, mobile.flightradar24.com, api4.bybutter.com, wallpaper.soutushenqi.com, api.tipsoon.com, *xiaozujian, lchttpapi.xczim.com, app.yiyan.art, gateway.caixin.com, notability.com, pan.baidu.com, spclient.wg.spotify.com, *wps*, ticktick.com, ap*.intsig.net, ipadcms.caixin.com, *.aoscdn.com, *.xiuxiu.meitu.com, claritywallpaper.com, api.meiease.cn, restore-access.indream.app, v2.appraven.net
