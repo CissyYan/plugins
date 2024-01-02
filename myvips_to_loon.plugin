@@ -20,6 +20,4 @@ http-response ^https?:\/\/v2\.appraven\.net\/appraven\/graphql script-path = htt
 http-response ^https?:\/\/explorer\.tratao\.com\/api\/client\/xtool\/vip script-path = https://github.com/ddgksf2013/MoYu/raw/master/JiJianHuiLvProCrack.js, requires-body = true,binary-body-mode=true, tag = 极简汇率
 
 
-[Rewrite]
-# 极简汇率☆解锁会员权限（2023-12-30）@ddgksf2013
-http-response ^https?:\/\/explorer\.tratao\.com\/api\/client\/xtool\/vip script-path = https://github.com/ddgksf2013/MoYu/raw/master/JiJianHuiLvProCrack.js, requires-body = true,binary-body-mode=true, tag = 极简汇率
+
