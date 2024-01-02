@@ -22,4 +22,4 @@ http-response ^https?:\/\/explorer\.tratao\.com\/api\/client\/xtool\/vip script-
 
 [Rewrite]
 # 极简汇率☆解锁会员权限（2023-12-30）@ddgksf2013
-^https?:\/\/explorer\.tratao\.com\/api\/client\/xtool\/vip url script-response-body https://github.com/ddgksf2013/MoYu/raw/master/JiJianHuiLvProCrack.js
+http-response ^https?:\/\/explorer\.tratao\.com\/api\/client\/xtool\/vip script-path = https://github.com/ddgksf2013/MoYu/raw/master/JiJianHuiLvProCrack.js, requires-body = true,binary-body-mode=true, tag = 极简汇率
