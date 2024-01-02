@@ -5,7 +5,7 @@
 #!icon = https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/maomi/mm23.png
 
 [Mitm]
-hostname = mobile.flightradar24.com, spclient.wg.spotify.com, *wps*, ticktick.com, ap*.intsig.net, *.aoscdn.com, *.xiuxiu.meitu.com, claritywallpaper.com, api.meiease.cn, restore-access.indream.app, v2.appraven.net
+hostname = mobile.flightradar24.com, spclient.wg.spotify.com, *wps*, ticktick.com, ap*.intsig.net, *.aoscdn.com, *.xiuxiu.meitu.com, claritywallpaper.com, api.meiease.cn, restore-access.indream.app, v2.appraven.net, explorer.tratao.com
 [Script]
 #Spotify
 http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body = true,binary-body-mode=true, tag = Spotify-proto
@@ -16,3 +16,10 @@ http-response ^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)
 http-request ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|\w{9}) script-path = https://github.com/ddgksf2013/dev/raw/main/flightradar24.js, requires-body = true, tag = Flightradar24
 #Appraven(美化)
 http-response ^https?:\/\/v2\.appraven\.net\/appraven\/graphql script-path = https://gist.githubusercontent.com/ddgksf2013/562f8fd6a40be92d7c8b358aa25eab3f/raw/appraven.vip.js, requires-body = true, tag = Appraven
+# 极简汇率☆解锁会员权限（2023-12-30）@ddgksf2013
+http-response ^https?:\/\/explorer\.tratao\.com\/api\/client\/xtool\/vip script-path = https://github.com/ddgksf2013/MoYu/raw/master/JiJianHuiLvProCrack.js, requires-body = true,binary-body-mode=true, tag = 极简汇率
+
+
+[Rewrite]
+# 极简汇率☆解锁会员权限（2023-12-30）@ddgksf2013
+^https?:\/\/explorer\.tratao\.com\/api\/client\/xtool\/vip url script-response-body https://github.com/ddgksf2013/MoYu/raw/master/JiJianHuiLvProCrack.js
