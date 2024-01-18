@@ -5,7 +5,7 @@
 #!icon = https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/maomi/mm23.png
 
 [Mitm]
-hostname = mobile.flightradar24.com, spclient.wg.spotify.com, *wps*, ticktick.com, ap*.intsig.net, *.aoscdn.com, *.xiuxiu.meitu.com, claritywallpaper.com, api.meiease.cn, restore-access.indream.app, v2.appraven.net, explorer.tratao.com
+hostname = mobile.flightradar24.com, spclient.wg.spotify.com, *wps*, ticktick.com, ap*.intsig.net, *.aoscdn.com, *.xiuxiu.meitu.com, claritywallpaper.com, api.meiease.cn, restore-access.indream.app, v2.appraven.net, explorer.tratao.com,api.revenuecat.com
 [Script]
 #Spotify
 http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body = true,binary-body-mode=true, tag = Spotify-proto
@@ -22,3 +22,9 @@ http-response ^https?:\/\/v2\.appraven\.net\/appraven\/graphql script-path = htt
 
 # 极简汇率
 http-response ^https?:\/\/explorer\.tratao\.com\/api\/client\/xtool\/vip script-path=https://raw.githubusercontent.com/Guding88/Script/main/jijianhuilv.js, requires-body=true, tag=极简汇率
+
+#revenuecat
+#修改
+http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js, requires-body=true, timeout=10, tag=Revenuecat
+#清理
+http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js, requires-body=false, timeout=10, tag=Revenuecat
