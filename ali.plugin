@@ -5,6 +5,8 @@
 #!icon=
 
 [Script]
+#https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, tag=阿里云cookie, update-interval=172800, opt-parser=true, enabled=true
+
 
 #cron "0 8 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, enabled=true, tag=阿里
 cron "0 8 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, enabled=true, tag=阿里
