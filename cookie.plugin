@@ -1,0 +1,18 @@
+#!name=签到cookie获取
+#!desc=收集自用脚本
+#!homepage=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.loon.plugin
+#!author=
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AliYunDrive.png
+
+[Script]
+#阿里云盘
+http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body=true, timeout=60, tag=获取cookie
+# 获取什么值得买任务需要的各项参数
+http-request ^https?:\/\/user-api\.smzdm\.com\/checkin$ script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js, timeout=60, tag=smzdm_daily
+# 获取森空岛签到需要的各项参数
+http-response ^https://as.hypergryph.com/user/info/v1/basic script-path=https://raw.githubusercontent.com/kayanouriko/quantumultx-skland-auto-sign/main/src/skland.token.js, requires-body=true, timeout=60, tag=skland.token
+http-request ^https://zonai.skland.com/api/v1/game script-path=https://raw.githubusercontent.com/kayanouriko/quantumultx-skland-auto-sign/main/src/skland.token.js, timeout=60, tag=skland.token
+# 获取高德地图签到需要的各项参数
+http-response ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body=true, timeout=60, tag=ampDache
+[MITM]
+hostname = auth.alipan.com, auth.aliyundrive.com
