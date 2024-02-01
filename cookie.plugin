@@ -15,4 +15,4 @@ http-request ^https://zonai.skland.com/api/v1/game script-path=https://raw.githu
 # 获取高德地图签到需要的各项参数
 http-response ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body=true, timeout=60, tag=ampDache
 [MITM]
-hostname = auth.alipan.com, auth.aliyundrive.com
+hostname = auth.alipan.com, auth.aliyundrive.com, user-api.smzdm.com, as.hypergryph.com, zonai.skland.com, *.amap.com
