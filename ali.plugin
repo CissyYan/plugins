@@ -1,12 +1,11 @@
-#!name=阿里云签到
+#!name=阿里云签到cookie
 #!desc=QX脚本转换为loon插件
 #!homepage=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
 #!author=@Sliverkiss
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AliYunDrive.png
 
 [Script]
-cron "04 00 10 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=60, tag=阿里云定时签到
-#http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body=true, timeout=60, tag=获取cookie
+http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body=true, timeout=60, tag=获取cookie
 
 [MITM]
 hostname = auth.alipan.com, auth.aliyundrive.com
