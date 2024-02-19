@@ -39,6 +39,8 @@ http-response https://storybook.ifenghui.com/api script-path=https://raw.githubu
 http-response ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, requires-body=true, tag=Revenuecat解锁系列
 http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, requires-body=false, tag=Reheji
 
+#emby
+http-response ^https?:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/embycrack.js, requires-body=true, tag=Emby(解锁播放权限)
 
 [Rewrite]
 #开屏广告需清理缓存
