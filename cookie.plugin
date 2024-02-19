@@ -14,5 +14,8 @@ http-response ^https://as.hypergryph.com/user/info/v1/basic script-path=https://
 http-request ^https://zonai.skland.com/api/v1/game script-path=https://raw.githubusercontent.com/kayanouriko/quantumultx-skland-auto-sign/main/src/skland.token.js, timeout=60, tag=skland.token
 # 获取高德地图签到需要的各项参数
 http-response ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body=true, timeout=60, tag=ampDache
+# 星星充电
+http-request ^https:\/\/gateway\.starcharge\.com\/apph5\/xcxApiV2\/wechat\/starPoint\/sign tag=星星充电Cookie, script-path=https://raw.githubusercontent.com/shengetui/qx/main/xxcd.js,requires-body=1
 [MITM]
-hostname = auth.alipan.com, auth.aliyundrive.com, user-api.smzdm.com, as.hypergryph.com, zonai.skland.com, *.amap.com
+hostname = auth.alipan.com, auth.aliyundrive.com, user-api.smzdm.com, as.hypergryph.com, zonai.skland.com, *.amap.com,gateway.starcharge.com
+
