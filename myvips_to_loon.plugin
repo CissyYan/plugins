@@ -35,11 +35,11 @@ http-response ^https?:\/\/(xremit\.xcurrency|explorer.tratao)\.com\/api\/client\
 http-response https://storybook.ifenghui.com/api script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/gushifeichuan.js, requires-body=true, timeout=60, tag=gushifeichuan
 
 # Revenuecat解锁系列
-# http-response ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, requires-body=true, tag=Revenuecat解锁系列
-# http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, requires-body=false, tag=Reheji
+http-response ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, requires-body=true, tag=Revenuecat解锁系列
+http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, requires-body=false, tag=Reheji
 # ～ RevenueCat@ddgksf2013
-http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) script-path=https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js, requires-body=true, timeout=60, tag=RevenueCatVip
-http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers) script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/deleteHeader.js, timeout=60, tag=RevenueCatDeleteHeader
+# http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) script-path=https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js, requires-body=true, timeout=60, tag=RevenueCatVip
+# http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers) script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/deleteHeader.js, timeout=60, tag=RevenueCatDeleteHeader
 
 [Rewrite]
 #开屏广告需清理缓存
