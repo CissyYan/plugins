@@ -7,14 +7,15 @@ https://github.com/ddgksf2013/dev/raw/master/ForOwnUse.conf
 https://raw.githubusercontent.com/chxm1023/Script_X/main/Collections.plugin
 ####
 [Mitm]
-hostname = mobile.flightradar24.com, spclient.wg.spotify.com, *wps*, ticktick.com, ap*.intsig.net, *.aoscdn.com, *.xiuxiu.meitu.com, claritywallpaper.com, api.meiease.cn, restore-access.indream.app, v2.appraven.net, explorer.tratao.com,api.revenuecat.com,storybook.ifenghui.com
+hostname = mobile.flightradar24.com, spclient.wg.spotify.com, *wps*, ticktick.com, ap*.intsig.net, *.aoscdn.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com , claritywallpaper.com, api.meiease.cn, restore-access.indream.app, v2.appraven.net, explorer.tratao.com,api.revenuecat.com,storybook.ifenghui.com
 [Script]
 #Spotify
 http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body = true,binary-body-mode=true, tag = Spotify-proto
 http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js, tag = Spotify-json
 
 #美图秀秀
-http-response ^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/ script-path = https://github.com/ddgksf2013/dev/raw/main/MeiTuXiuXiuProCrack.js, requires-body = true, tag = 美图秀秀
+# http-response ^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/ script-path = https://github.com/ddgksf2013/dev/raw/main/MeiTuXiuXiuProCrack.js, requires-body = true, tag = 美图秀秀
+http-response ^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js, requires-body=true, tag=美图秀秀
 
 #Flightradar24
 http-request ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|\w{9}) script-path = https://github.com/ddgksf2013/dev/raw/main/flightradar24.js, requires-body = true, tag = Flightradar24
