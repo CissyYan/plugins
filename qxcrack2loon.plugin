@@ -32,9 +32,6 @@ http-response ^https?:\/\/(xremit\.xcurrency|explorer.tratao)\.com\/api\/client\
 # http-response ^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners)|p\/v\d\/(vip_info|user_info)) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js, requires-body=true, tag=彩云天气-SVIP会员
 # http-request ^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js, requires-body=false, tag=彩云天气-SVIP地图
 
-#故事飞船
-http-response https://storybook.ifenghui.com/api script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/gushifeichuan.js, requires-body=true, timeout=60, tag=gushifeichuan
-
 # Revenuecat解锁系列
 http-response ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, requires-body=true, tag=Revenuecat解锁系列
 http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, requires-body=false, tag=Reheji
@@ -42,11 +39,4 @@ http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?
 # Emby(解锁播放权限)
 http-response ^https?:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/embycrack.js, requires-body=true, tag=Emby(解锁播放权限)
 
-#贝乐虎
-http-response ^http[s]?:\/\/.*ubestkid.*(getUserProfile|course|api/v1/featureV2|xtapi/zhuanlan|/api/v1/bv/videoV2).*$ script-path=https://raw.githubusercontent.com/gjwj666/qx/main/blh.js, requires-body=true,binary-body-mode=true, timeout=60, tag=blh
-
-[Rewrite]
-#开屏广告需清理缓存
-#故事飞船
-https://storybook.ifenghui.com/api/ads/getIndexAds - reject
 
