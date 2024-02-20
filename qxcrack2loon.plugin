@@ -43,7 +43,7 @@ http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?
 http-response ^https?:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/embycrack.js, requires-body=true, tag=Emby(解锁播放权限)
 
 #贝乐虎
-http-response ^http[s]?:\/\/.*ubestkid.*(getUserProfile|course|api/v1/featureV2|xtapi/zhuanlan|/api/v1/bv/videoV2).*$ script-path=https://raw.githubusercontent.com/gjwj666/qx/main/blh.js, requires-body=true, timeout=60, tag=blh
+http-response ^http[s]?:\/\/.*ubestkid.*(getUserProfile|course|api/v1/featureV2|xtapi/zhuanlan|/api/v1/bv/videoV2).*$ script-path=https://raw.githubusercontent.com/gjwj666/qx/main/blh.js, requires-body=true,binary-body-mode=true, timeout=60, tag=blh
 
 [Rewrite]
 #开屏广告需清理缓存
