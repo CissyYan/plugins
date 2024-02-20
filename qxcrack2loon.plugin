@@ -7,7 +7,7 @@ https://github.com/ddgksf2013/dev/raw/master/ForOwnUse.conf
 https://raw.githubusercontent.com/chxm1023/Script_X/main/Collections.plugin
 ####
 [Mitm]
-hostname = mobile.flightradar24.com, spclient.wg.spotify.com, *wps*, ticktick.com, ap*.intsig.net, *.aoscdn.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com , claritywallpaper.com, api.meiease.cn, restore-access.indream.app, v2.appraven.net, explorer.tratao.com,api.revenuecat.com,storybook.ifenghui.com, mb3admin.com
+hostname = *ubestkid*, mobile.flightradar24.com, spclient.wg.spotify.com, *wps*, ticktick.com, ap*.intsig.net, *.aoscdn.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com , claritywallpaper.com, api.meiease.cn, restore-access.indream.app, v2.appraven.net, explorer.tratao.com,api.revenuecat.com,storybook.ifenghui.com, mb3admin.com
 [Script]
 #Spotify
 http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body = true,binary-body-mode=true, tag = Spotify-proto
@@ -41,6 +41,9 @@ http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?
 
 # Emby(解锁播放权限)
 http-response ^https?:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/embycrack.js, requires-body=true, tag=Emby(解锁播放权限)
+
+#贝乐虎
+http-response ^http[s]?:\/\/.*ubestkid.*(getUserProfile|course|api/v1/featureV2|xtapi/zhuanlan|/api/v1/bv/videoV2).*$ script-path=https://raw.githubusercontent.com/gjwj666/qx/main/blh.js, requires-body=true, timeout=60, tag=blh
 
 [Rewrite]
 #开屏广告需清理缓存
