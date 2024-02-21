@@ -7,7 +7,7 @@ https://github.com/ddgksf2013/dev/raw/master/ForOwnUse.conf
 https://raw.githubusercontent.com/chxm1023/Script_X/main/Collections.plugin
 ####
 [Mitm]
-hostname = lp-vid.xiongmaoboshi.com, lp-api.xiongmaoboshi.com, *ubestkid*, mobile.flightradar24.com, spclient.wg.spotify.com, *wps*, ticktick.com, ap*.intsig.net, *.aoscdn.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com , claritywallpaper.com, api.meiease.cn, restore-access.indream.app, v2.appraven.net, explorer.tratao.com,api.revenuecat.com,storybook.ifenghui.com, mb3admin.com
+hostname = lp-vid.xiongmaoboshi.com, lp-api.xiongmaoboshi.com, *ubestkid*, mobile.flightradar24.com, spclient.wg.spotify.com, *wps*, ticktick.com, ap*.intsig.net, *.aoscdn.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com , claritywallpaper.com, api.meiease.cn, restore-access.indream.app, appraven.net, v2.appraven.net, explorer.tratao.com,api.revenuecat.com,storybook.ifenghui.com, mb3admin.com
 [Script]
 #Spotify
 http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body = true,binary-body-mode=true, tag = Spotify-proto
@@ -21,7 +21,8 @@ http-response ^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.
 http-request ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|\w{9}) script-path = https://github.com/ddgksf2013/dev/raw/main/flightradar24.js, requires-body = true, tag = Flightradar24
 
 #Appraven(美化)
-http-response ^https?:\/\/v2\.appraven\.net\/appraven\/graphql script-path = https://gist.githubusercontent.com/ddgksf2013/562f8fd6a40be92d7c8b358aa25eab3f/raw/appraven.vip.js, requires-body = true, tag = Appraven
+#http-response ^https?:\/\/v2\.appraven\.net\/appraven\/graphql script-path = https://gist.githubusercontent.com/ddgksf2013/562f8fd6a40be92d7c8b358aa25eab3f/raw/appraven.vip.js, requires-body = true, tag = Appraven美化
+http-response https://appraven.net/appraven/graphql  script-path = https://raw.githubusercontent.com/Yu9191/Rewrite/main/AppRaven.js, requires-body = true, tag = Appraven
 
 # 极简汇率
 #http-response ^https?:\/\/explorer\.tratao\.com\/api\/client\/xtool\/vip script-path=https://raw.githubusercontent.com/Guding88/Script/main/jijianhuilv.js, requires-body=true, tag=极简汇率
@@ -42,3 +43,4 @@ http-response ^https?:\/\/mb3admin\.com\/admin\/service(\/registration\/validate
 # 熊猫博士
 http-response ^https://lp-api.xiongmaoboshi.com/lp-api/ns script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/xiongmaoboshibaike.js, requires-body=true, timeout=60, tag=熊猫博士
 http-request ^https:\/\/lp-vid\.xiongmaoboshi\.com\/.*\.m3u8$ script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/m3u8/xiongmaoboshibaike.js, timeout=60, tag=熊猫博士获取完整视频
+
