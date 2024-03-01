@@ -6,7 +6,7 @@
 ##https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf##
 
 [Mitm]
-hostname = *.qyfxgd.cn, *.weilai555.com, *.ecoliving168.com,vpic.cms.qq.com,m.taobao.com
+hostname = *.qyfxgd.cn, *.weilai555.com, *.ecoliving168.com,vpic.cms.qq.com,m.taobao.com, api.ys7.com, i.ys7.com
 
 [Rule]
 #555影视
@@ -24,3 +24,6 @@ http-response ^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}(:\d+)?\/api\/v\d\/
 #damai
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome reject-200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.mec\.popup\.get reject-200
+#yingshiyun
+^https?:\/\/api\.ys7\.com\/api\/ads url reject-200
+^https?:\/\/i\.ys7\.com\/api\/ads\/ url reject-200
